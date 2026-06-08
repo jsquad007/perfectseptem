@@ -49,10 +49,14 @@ export default function Sidebar() {
           <span className="material-symbols-outlined text-xl">rss_feed</span>
           RSS
         </a>
-        <span className="flex items-center gap-3 text-[#bbc9c7] text-sm select-all">
-          <span className="material-symbols-outlined text-xl">alternate_email</span>
+        <a
+          href="#"
+          className="flex items-center gap-3 text-[#bbc9c7] hover:text-[#51dbd0] transition-colors text-sm"
+          onClick={(e) => { e.preventDefault(); window.location.href = "mailto:" + "perfectseptem" + "@" + "gmail.com"; }}
+        >
+          <span className="material-symbols-outlined text-xl">mail</span>
           perfectseptem AT gmail.com
-        </span>
+        </a>
       </div>
     </aside>
   );

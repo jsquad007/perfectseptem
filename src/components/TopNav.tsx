@@ -24,9 +24,13 @@ export default function TopNav() {
           <a href="/feed.xml" aria-label="RSS">
             <span className="material-symbols-outlined text-[#51dbd0] text-xl">rss_feed</span>
           </a>
-          <span title="perfectseptem AT gmail.com" className="cursor-default">
+          <a
+            href="#"
+            aria-label="Email"
+            onClick={(e) => { e.preventDefault(); window.location.href = "mailto:" + "perfectseptem" + "@" + "gmail.com"; }}
+          >
             <span className="material-symbols-outlined text-[#51dbd0] text-xl">mail</span>
-          </span>
+          </a>
         </div>
       </div>
       <nav className="flex overflow-x-auto gap-1 px-4 pb-3 scrollbar-none">
