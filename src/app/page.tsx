@@ -72,7 +72,16 @@ export default function HomePage() {
         </div>
 
         {/* Shop */}
-        <div className="md:col-span-2 bento-card bg-[#2a2a2a] border border-[#3c4948]/20 rounded-xl p-8 flex flex-col justify-between group min-h-48">
+        <div className="md:col-span-2 bento-card bg-[#2a2a2a] border border-[#3c4948]/20 rounded-xl overflow-hidden relative flex flex-col justify-between group min-h-48">
+          <Image
+            src="/images/shop-bg.jpg"
+            alt=""
+            fill
+            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div className="absolute inset-0 bg-[#2a2a2a]/70 z-10" />
+          <div className="relative z-20 p-8 flex flex-col justify-between h-full">
           <div>
             <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">shopping_bag</span>
             <h3 className="text-2xl font-semibold text-[#e5e2e1]">Shop</h3>
@@ -86,12 +95,20 @@ export default function HomePage() {
           >
             Browse Collection <span className="material-symbols-outlined">arrow_forward</span>
           </a>
+          </div>
         </div>
 
         {/* Gallery */}
         <div className="md:col-span-2 bento-card bg-[#201f1f] border border-[#3c4948]/20 rounded-xl overflow-hidden relative group min-h-48">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#353534] via-[#353534]/60 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8 flex items-center justify-between">
+          <Image
+            src="/images/gallery-bg.jpg"
+            alt=""
+            fill
+            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#131313] via-[#131313]/50 to-transparent z-10" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 flex items-center justify-between z-20">
             <div>
               <h3 className="text-2xl font-semibold text-[#51dbd0]">Gallery</h3>
               <p className="text-[#bbc9c7] text-sm mt-1">Follow along on Instagram.</p>
