@@ -17,7 +17,8 @@ export default function TopNav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 lg:hidden bg-[#131313]/90 backdrop-blur-md border-b border-[#3c4948]/20">
       <div className="flex items-center justify-between px-4 py-3">
-        <Link href="/" className="text-[#51dbd0] font-semibold text-base">
+        <Link href="/" className="flex items-center gap-2 text-[#51dbd0] font-semibold text-base">
+          <img src="/logo.svg" alt="" className="h-6 w-auto" />
           Perfect Septem
         </Link>
         <div className="flex items-center gap-4">
