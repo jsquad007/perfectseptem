@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Colors — Luminous Geometric design system */
+  --color-background: #131313;
+  --color-surface: #131313;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #393939;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-variant: #353534;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #bbc9c7;
+  --color-on-background: #e5e2e1;
+  --color-outline: #869491;
+  --color-outline-variant: #3c4948;
+  --color-primary: #51dbd0;
+  --color-primary-container: #0bb4aa;
+  --color-on-primary: #003734;
+  --color-on-primary-container: #003f3b;
+  --color-secondary: #bcc7de;
+  --color-on-secondary: #263143;
+  --color-secondary-container: #3e495d;
+  --color-on-secondary-container: #aeb9d0;
+  --color-tertiary: #ffb599;
+  --color-on-tertiary: #5a1c00;
+  --color-tertiary-container: #ed855b;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-surface-tint: #51dbd0;
+  --color-inverse-surface: #e5e2e1;
+  --color-inverse-on-surface: #313030;
+  --color-inverse-primary: #006a64;
+  --color-primary-fixed: #72f7ec;
+  --color-primary-fixed-dim: #51dbd0;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Typography — Hanken Grotesk */
+  --font-sans: "Hanken Grotesk", sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 12px;
+  --spacing-base: 8px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 80px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 64px;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #131313;
+  color: #e5e2e1;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+/* Persistent background text layer */
+.bg-text-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.03;
+  user-select: none;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 3rem;
+  color: #e5e2e1;
+}
+
+/* Teal glow on primary buttons */
+.glow-teal {
+  box-shadow: 0 0 20px rgba(11, 180, 170, 0.15);
+}
+
+/* Bento card hover */
+.bento-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  background-color: #2a2a2a;
 }
