@@ -24,9 +24,9 @@ export default function TopNav() {
           <a href="/feed.xml" aria-label="RSS">
             <span className="material-symbols-outlined text-[#51dbd0] text-xl">rss_feed</span>
           </a>
-          <a href="mailto:perfectseptem@gmail.com" aria-label="Email">
+          <span title="perfectseptem AT gmail.com" className="cursor-default">
             <span className="material-symbols-outlined text-[#51dbd0] text-xl">mail</span>
-          </a>
+          </span>
         </div>
       </div>
       <nav className="flex overflow-x-auto gap-1 px-4 pb-3 scrollbar-none">

@@ -37,12 +37,9 @@ export default function AboutPage() {
         <div className="mt-8 pt-6 border-t border-[#3c4948]/30">
           <p className="text-sm">
             Want to get in touch?{" "}
-            <a
-              href="mailto:perfectseptem@gmail.com"
-              className="text-[#51dbd0] hover:underline"
-            >
-              perfectseptem@gmail.com
-            </a>
+            <span className="text-[#51dbd0] select-all">
+              perfectseptem AT gmail.com
+            </span>
           </p>
         </div>
       </div>

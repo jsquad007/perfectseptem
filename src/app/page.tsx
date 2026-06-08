@@ -156,7 +156,7 @@ export default function HomePage() {
         </div>
         <div className="flex gap-6 text-sm text-[#bbc9c7]">
           <Link href="/about" className="hover:text-[#51dbd0] transition-colors">About</Link>
-          <a href="mailto:perfectseptem@gmail.com" className="hover:text-[#51dbd0] transition-colors">Contact</a>
+          <span className="text-[#bbc9c7] select-all">perfectseptem AT gmail.com</span>
         </div>
       </footer>
     </div>
