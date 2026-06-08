@@ -12,7 +12,7 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/icon.svg" },
 
   title: "Perfect Septem — Sharing the Good News",
   description:
