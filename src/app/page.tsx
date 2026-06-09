@@ -108,19 +108,16 @@ export default function HomePage() {
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#131313] via-[#131313]/50 to-transparent z-10" />
-          <div className="absolute bottom-0 left-0 right-0 p-8 flex items-center justify-between z-20">
-            <div>
-              <h3 className="text-2xl font-semibold text-[#51dbd0]">Gallery</h3>
-              <p className="text-[#bbc9c7] text-sm mt-1">Follow along on Instagram.</p>
-            </div>
+          <div className="absolute bottom-0 left-0 p-8 z-20">
+            <h3 className="text-2xl font-semibold text-[#51dbd0]">Gallery</h3>
+            <p className="text-[#bbc9c7] text-sm mt-1">Follow along on Instagram.</p>
             <a
               href="https://www.instagram.com/perfectseptem/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 bg-[#0bb4aa] rounded-full text-[#003734] shadow-lg group-hover:rotate-12 transition-transform"
-              aria-label="Instagram"
+              className="mt-4 inline-flex items-center gap-2 text-[#51dbd0] font-bold group-hover:translate-x-2 transition-transform"
             >
-              <span className="material-symbols-outlined text-2xl">share</span>
+              Browse Gallery <span className="material-symbols-outlined">arrow_forward</span>
             </a>
           </div>
         </div>
