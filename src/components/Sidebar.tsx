@@ -18,7 +18,7 @@ export default function Sidebar() {
     <aside className="hidden lg:flex flex-col h-screen p-6 fixed left-0 top-0 w-64 bg-[#131313] border-r border-[#3c4948]/20 z-40">
       <div className="mb-10 mt-4">
         <div className="flex items-center gap-3">
-          <img src="/logo.svg" alt="Perfect Septem logo" className="h-8 w-auto" />
+          <img src="/logo.svg" alt="Perfect Septem logo" className="h-12 w-auto" />
           <h2 className="text-2xl font-semibold text-[#51dbd0]">Perfect Septem</h2>
         </div>
         <p className="text-sm text-[#3c4948] mt-1">Sharing the Good News</p>
