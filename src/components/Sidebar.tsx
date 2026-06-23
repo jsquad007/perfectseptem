@@ -47,18 +47,18 @@ export default function Sidebar() {
       <div className="mt-auto space-y-3 pb-4">
         <a
           href="/feed.xml"
+          aria-label="RSS"
           className="flex items-center gap-3 text-[#bbc9c7] hover:text-[#51dbd0] transition-colors text-sm"
         >
           <span className="material-symbols-outlined text-xl">rss_feed</span>
-          RSS
         </a>
         <a
           href="#"
+          aria-label="Email"
           className="flex items-center gap-3 text-[#bbc9c7] hover:text-[#51dbd0] transition-colors text-sm"
           onClick={(e) => { e.preventDefault(); window.location.href = "mailto:" + "perfectseptem" + "@" + "gmail.com"; }}
         >
           <span className="material-symbols-outlined text-xl">mail</span>
-          perfectseptem AT gmail.com
         </a>
       </div>
     </aside>
