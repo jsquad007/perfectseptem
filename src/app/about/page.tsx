@@ -34,14 +34,6 @@ export default function AboutPage() {
           The name <strong className="text-[#e5e2e1]">Perfect Septem</strong> (Latin for &ldquo;perfect seven&rdquo;)
           is drawn from the biblical significance of the number seven — completion, covenant, and divine blessing.
         </p>
-        <div className="mt-8 pt-6 border-t border-[#3c4948]/30">
-          <p className="text-sm">
-            Want to get in touch?{" "}
-            <span className="text-[#51dbd0] select-all">
-              perfectseptem AT gmail.com
-            </span>
-          </p>
-        </div>
       </div>
     </div>
   );
