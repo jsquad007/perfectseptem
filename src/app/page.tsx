@@ -146,28 +146,6 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-
-        {/* FAQ */}
-        <div className="md:col-span-2 bento-card bg-[#1c1b1b] border border-[#3c4948]/20 rounded-xl p-8 flex flex-col">
-          <h3 className="text-2xl font-semibold text-[#51dbd0] mb-4">FAQ</h3>
-          <div className="space-y-4 flex-1">
-            <div>
-              <p className="text-sm font-bold text-[#e5e2e1]">How do I order bookmarks?</p>
-              <p className="text-sm text-[#bbc9c7] mt-1">Email me at perfectseptem AT gmail.com and we can arrange something.</p>
-            </div>
-            <div>
-              <p className="text-sm font-bold text-[#e5e2e1]">How much do the bookmarks cost?</p>
-              <p className="text-sm text-[#bbc9c7] mt-1">I am offering these for free. Delivery fees are at your own expense.</p>
-            </div>
-            <div>
-              <p className="text-sm font-bold text-[#e5e2e1]">How do I order shirts?</p>
-              <p className="text-sm text-[#bbc9c7] mt-1">Available on Redbubble via the Shop card above.</p>
-            </div>
-          </div>
-          <Link href="/faq" className="mt-6 text-[#51dbd0] text-sm font-bold hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-            All FAQs <span className="material-symbols-outlined text-base">arrow_forward</span>
-          </Link>
-        </div>
       </section>
 
       {/* Footer */}
