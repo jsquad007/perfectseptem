@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "How do I order some bookmarks?",
-    a: "Please email me at perfectseptem AT gmail.com and we can arrange something.",
+    a: "Click the mail icon in the menu bar and send me a message — we can arrange something.",
   },
   {
     q: "How much do the bookmarks cost?",
@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: "Can I suggest a topic for a blog post?",
-    a: "Absolutely — send me an email at perfectseptem AT gmail.com with your idea.",
+    a: "Absolutely — click the mail icon in the menu bar and send me your idea.",
   },
   {
     q: "Is there an RSS feed?",
