@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
+import videos from "../../../content/videos.json";
 
 export const metadata: Metadata = {
   title: "Videos — Perfect Septem",
   description: "Faith-filled videos worth watching.",
 };
-
-const videos = [
-  {
-    id: "P-WciLat8tI",
-    title: "St. Joseph: Terror of Demons",
-    description: "A man battling temptation calls on St. Joseph's intercession as an unseen spiritual battle unfolds between light and darkness.",
-  },
-];
 
 export default function VideosPage() {
   return (
