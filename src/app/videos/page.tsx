@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 const videos = [
   {
     id: "P-WciLat8tI",
-    title: "No.1 Christianity Expert: The Truth About Christianity! The Case For Jesus (Historian's Proof)",
+    title: "St. Joseph: Terror of Demons",
     description: "A man battling temptation calls on St. Joseph's intercession as an unseen spiritual battle unfolds between light and darkness.",
   },
 ];
