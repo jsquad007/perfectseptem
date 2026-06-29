@@ -74,7 +74,7 @@ export default function HomePage() {
         {/* Shop */}
         <div className="md:col-span-2 bento-card bg-[#2a2a2a] border border-[#3c4948]/20 rounded-xl overflow-hidden relative flex flex-col justify-between group min-h-48">
           <Image
-            src="/images/shop-bg.jpg"
+            src="/images/shop-bg.png"
             alt=""
             fill
             className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
