@@ -176,10 +176,6 @@ export default function HomePage() {
           <span className="text-xs font-semibold text-[#ffb599] tracking-widest uppercase">Perfect Septem</span>
           <p className="text-sm text-[#bbc9c7] mt-1">© 2025 Perfect Septem. Sharing the Good News.</p>
         </div>
-        <div className="flex gap-6 text-sm text-[#bbc9c7]">
-          <Link href="/about" className="hover:text-[#51dbd0] transition-colors">About</Link>
-          <span className="text-[#bbc9c7] select-all">perfectseptem AT gmail.com</span>
-        </div>
       </footer>
     </div>
   );
