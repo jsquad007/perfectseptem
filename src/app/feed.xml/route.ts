@@ -1,19 +1,38 @@
 import { getAllPosts } from "@/lib/posts";
+import videos from "../../../content/videos.json";
 
 const SITE_URL = "https://perfectseptem.com";
 
 export async function GET() {
   const posts = getAllPosts();
 
-  const items = posts
+  const postItems = posts.map((post) => ({
+    title: post.title,
+    link: `${SITE_URL}/posts/${post.slug}`,
+    description: post.excerpt,
+    date: new Date(post.date),
+  }));
+
+  const videoItems = videos.map((video) => ({
+    title: video.title,
+    link: `https://www.youtube.com/watch?v=${video.id}`,
+    description: video.description,
+    date: new Date(video.date),
+  }));
+
+  const allItems = [...postItems, ...videoItems].sort(
+    (a, b) => b.date.getTime() - a.date.getTime()
+  );
+
+  const items = allItems
     .map(
-      (post) => `
+      (item) => `
     <item>
-      <title><![CDATA[${post.title}]]></title>
-      <link>${SITE_URL}/posts/${post.slug}</link>
-      <guid isPermaLink="true">${SITE_URL}/posts/${post.slug}</guid>
-      <description><![CDATA[${post.excerpt}]]></description>
-      <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+      <title><![CDATA[${item.title}]]></title>
+      <link>${item.link}</link>
+      <guid isPermaLink="true">${item.link}</guid>
+      <description><![CDATA[${item.description}]]></description>
+      <pubDate>${item.date.toUTCString()}</pubDate>
     </item>`
     )
     .join("\n");
