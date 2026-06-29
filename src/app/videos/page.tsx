@@ -9,7 +9,7 @@ const videos = [
   {
     id: "P-WciLat8tI",
     title: "No.1 Christianity Expert: The Truth About Christianity! The Case For Jesus (Historian's Proof)",
-    description: "Wesley Huff discusses the historical case for Jesus and the reliability of the Gospel accounts.",
+    description: "A man battling temptation calls on St. Joseph's intercession as an unseen spiritual battle unfolds between light and darkness.",
   },
 ];
 
