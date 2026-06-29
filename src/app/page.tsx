@@ -101,7 +101,7 @@ export default function HomePage() {
         {/* Gallery */}
         <div className="md:col-span-2 bento-card bg-[#201f1f] border border-[#3c4948]/20 rounded-xl overflow-hidden relative group min-h-48">
           <Image
-            src="/images/gallery-bg.jpg"
+            src="/images/gallery-bg.png"
             alt=""
             fill
             className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
