@@ -122,6 +122,21 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Videos */}
+        <div className="md:col-span-2 bento-card bg-[#1c1b1b] border border-[#3c4948]/20 rounded-xl p-8 flex flex-col justify-between min-h-48">
+          <div>
+            <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">smart_display</span>
+            <h3 className="text-2xl font-semibold text-[#e5e2e1]">Videos</h3>
+            <p className="text-[#bbc9c7] text-sm mt-2">Faith-filled videos worth watching.</p>
+          </div>
+          <Link
+            href="/videos"
+            className="mt-8 inline-flex items-center gap-2 text-[#51dbd0] font-bold hover:translate-x-2 transition-transform"
+          >
+            Watch <span className="material-symbols-outlined">arrow_forward</span>
+          </Link>
+        </div>
+
         {/* FAQ */}
         <div className="md:col-span-2 bento-card bg-[#1c1b1b] border border-[#3c4948]/20 rounded-xl p-8 flex flex-col">
           <h3 className="text-2xl font-semibold text-[#51dbd0] mb-4">FAQ</h3>
