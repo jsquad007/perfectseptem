@@ -52,6 +52,7 @@ export default function HomePage() {
             src="/images/about-bg.jpg"
             alt=""
             fill
+            priority
             className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
