@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Left 2 Cook",
+    "url": "https://www.left2cook.com/",
+    "tagline": "Cook what you have. Waste less.",
+    "description": "Match saved recipes against what's in your kitchen right now, prioritising ingredients closest to expiry so less food gets thrown out.",
+    "icon": "restaurant",
+    "features": [
+      "AI recipe import from a photo, video link, URL, or pasted text",
+      "AI pantry import — snap your fridge or a grocery receipt",
+      "AI recipe generation from what's actually in your pantry",
+      "AI ingredient scaling with non-linear correction",
+      "Manual recipe entry, pantry tracking, and shopping lists — free forever"
+    ]
+  }
+]

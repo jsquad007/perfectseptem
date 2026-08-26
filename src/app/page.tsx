@@ -147,6 +147,21 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+
+        {/* Apps */}
+        <div className="md:col-span-2 bento-card bg-[#1c1b1b] border border-[#3c4948]/20 rounded-xl p-8 flex flex-col justify-between min-h-48">
+          <div>
+            <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">widgets</span>
+            <h3 className="text-2xl font-semibold text-[#e5e2e1]">Apps</h3>
+            <p className="text-[#bbc9c7] text-sm mt-2">A curated list of apps worth using.</p>
+          </div>
+          <Link
+            href="/apps"
+            className="mt-8 inline-flex items-center gap-2 text-[#51dbd0] font-bold hover:translate-x-2 transition-transform"
+          >
+            Explore <span className="material-symbols-outlined">arrow_forward</span>
+          </Link>
+        </div>
       </section>
 
       {/* Footer */}
