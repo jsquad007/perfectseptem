@@ -149,7 +149,7 @@ export default function HomePage() {
         </div>
 
         {/* Apps */}
-        <div className="md:col-span-2 bento-card bg-[#1c1b1b] border border-[#3c4948]/20 rounded-xl overflow-hidden relative flex flex-col justify-between group min-h-48">
+        <Link href="/apps" className="md:col-span-2 bento-card bg-[#1c1b1b] border border-[#3c4948]/20 rounded-xl overflow-hidden relative flex flex-col justify-between group min-h-48">
           <Image
             src="/images/app-bg.png"
             alt=""
@@ -164,14 +164,11 @@ export default function HomePage() {
               <h3 className="text-2xl font-semibold text-[#e5e2e1]">Tools &amp; Apps</h3>
               <p className="text-[#bbc9c7] text-sm mt-2">Things I&apos;ve made that are worth using.</p>
             </div>
-            <Link
-              href="/apps"
-              className="mt-8 inline-flex items-center gap-2 text-[#51dbd0] font-bold group-hover:translate-x-2 transition-transform"
-            >
+            <span className="mt-8 inline-flex items-center gap-2 text-[#51dbd0] font-bold group-hover:translate-x-2 transition-transform">
               Explore <span className="material-symbols-outlined">arrow_forward</span>
-            </Link>
+            </span>
           </div>
-        </div>
+        </Link>
       </section>
 
       {/* Footer */}
