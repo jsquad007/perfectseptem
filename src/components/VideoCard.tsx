@@ -6,10 +6,29 @@ interface VideoCardProps {
   id: string;
   title: string;
   description?: string;
-  renderDescription: (text: string) => React.ReactNode;
 }
 
-export default function VideoCard({ id, title, description, renderDescription }: VideoCardProps) {
+function renderDescription(text: string) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = text.split(urlRegex);
+  return parts.map((part, i) =>
+    urlRegex.test(part) ? (
+      <a
+        key={i}
+        href={part}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#51dbd0] underline underline-offset-2 decoration-[#51dbd0] hover:text-[#72f7ec] hover:decoration-[#72f7ec] transition-colors break-all"
+      >
+        {part}
+      </a>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
+
+export default function VideoCard({ id, title, description }: VideoCardProps) {
   const [active, setActive] = useState(false);
 
   return (

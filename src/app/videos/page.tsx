@@ -7,26 +7,6 @@ export const metadata: Metadata = {
   description: "Faith-filled videos worth watching.",
 };
 
-function renderDescription(text: string) {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  const parts = text.split(urlRegex);
-  return parts.map((part, i) =>
-    urlRegex.test(part) ? (
-      <a
-        key={i}
-        href={part}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-[#51dbd0] underline underline-offset-2 decoration-[#51dbd0] hover:text-[#72f7ec] hover:decoration-[#72f7ec] transition-colors break-all"
-      >
-        {part}
-      </a>
-    ) : (
-      <span key={i}>{part}</span>
-    )
-  );
-}
-
 export default function VideosPage() {
   return (
     <div className="pt-8">
@@ -40,7 +20,6 @@ export default function VideosPage() {
             id={video.id}
             title={video.title}
             description={video.description}
-            renderDescription={renderDescription}
           />
         ))}
       </div>
