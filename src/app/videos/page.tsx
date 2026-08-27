@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import videos from "../../../content/videos.json";
+import VideoCard from "@/components/VideoCard";
 
 export const metadata: Metadata = {
   title: "Videos — Perfect Septem",
@@ -34,25 +35,13 @@ export default function VideosPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {videos.map((video) => (
-          <div key={video.id} className="bg-[#1c1b1b] border border-[#3c4948]/20 rounded-xl overflow-hidden">
-            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-              <iframe
-                src={`https://www.youtube.com/embed/${video.id}`}
-                title={video.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
-            <div className="p-5">
-              <h2 className="text-[#e5e2e1] font-semibold text-base leading-snug">{video.title}</h2>
-              {video.description && (
-                <p className="text-[#bbc9c7] text-sm mt-2 leading-relaxed whitespace-pre-line">
-                  {renderDescription(video.description)}
-                </p>
-              )}
-            </div>
-          </div>
+          <VideoCard
+            key={video.id}
+            id={video.id}
+            title={video.title}
+            description={video.description}
+            renderDescription={renderDescription}
+          />
         ))}
       </div>
     </div>
