@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import apps from "../../../content/apps.json";
 
 export const metadata: Metadata = {
-  title: "Apps — Perfect Septem",
-  description: "A curated list of apps worth using.",
+  title: "Tools & Apps — Perfect Septem",
+  description: "Things I've made that are worth using.",
 };
 
 export default function AppsPage() {
   return (
     <div className="pt-8">
-      <h1 className="text-4xl font-bold text-[#e5e2e1] mb-2">Apps</h1>
-      <p className="text-[#bbc9c7] mb-10">A curated list of apps worth using.</p>
+      <h1 className="text-4xl font-bold text-[#e5e2e1] mb-2">Tools &amp; Apps</h1>
+      <p className="text-[#bbc9c7] mb-10">Things I&apos;ve made that are worth using.</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {apps.map((app) => (

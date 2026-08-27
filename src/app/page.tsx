@@ -161,8 +161,8 @@ export default function HomePage() {
           <div className="relative z-20 p-8 flex flex-col justify-between h-full">
             <div>
               <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">widgets</span>
-              <h3 className="text-2xl font-semibold text-[#e5e2e1]">Apps</h3>
-              <p className="text-[#bbc9c7] text-sm mt-2">A curated list of apps worth using.</p>
+              <h3 className="text-2xl font-semibold text-[#e5e2e1]">Tools &amp; Apps</h3>
+              <p className="text-[#bbc9c7] text-sm mt-2">Things I&apos;ve made that are worth using.</p>
             </div>
             <Link
               href="/apps"
