@@ -30,6 +30,7 @@ function renderDescription(text: string) {
 
 export default function VideoCard({ id, title, description }: VideoCardProps) {
   const [active, setActive] = useState(false);
+  const [thumbSrc, setThumbSrc] = useState(`https://img.youtube.com/vi/${id}/maxresdefault.jpg`);
 
   return (
     <div className="bg-[#1c1b1b] border border-[#3c4948]/20 rounded-xl overflow-hidden">
@@ -49,11 +50,12 @@ export default function VideoCard({ id, title, description }: VideoCardProps) {
             className="absolute inset-0 w-full h-full group"
           >
             <Image
-              src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+              src={thumbSrc}
               alt={title}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
+              onError={() => setThumbSrc(`https://img.youtube.com/vi/${id}/hqdefault.jpg`)}
             />
             {/* Play button overlay */}
             <span className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
