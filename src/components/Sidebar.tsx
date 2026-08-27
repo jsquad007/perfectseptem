@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ICONS } from "@/lib/icons";
 
 const NAV = [
   { href: "/", label: "Home", icon: "home" },
@@ -11,7 +12,7 @@ const NAV = [
   { href: "/apps", label: "Apps", icon: "widgets" },
   { href: "/faq", label: "FAQ", icon: "quiz" },
   { href: "/about", label: "About", icon: "info" },
-];
+] as const;
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -39,7 +40,7 @@ export default function Sidebar() {
                   : "text-[#bbc9c7] hover:bg-[#201f1f] hover:text-[#e5e2e1]"
               }`}
             >
-              <span className="material-symbols-outlined text-xl">{icon}</span>
+              <span className="material-symbols-outlined text-xl">{ICONS[icon]}</span>
               {label}
             </Link>
           );
@@ -52,7 +53,7 @@ export default function Sidebar() {
           aria-label="RSS"
           className="flex items-center gap-3 text-[#bbc9c7] hover:text-[#51dbd0] transition-colors text-sm"
         >
-          <span className="material-symbols-outlined text-xl">rss_feed</span>
+          <span className="material-symbols-outlined text-xl">{ICONS.rss_feed}</span>
         </a>
         <a
           href="#"
@@ -60,7 +61,7 @@ export default function Sidebar() {
           className="flex items-center gap-3 text-[#bbc9c7] hover:text-[#51dbd0] transition-colors text-sm"
           onClick={(e) => { e.preventDefault(); window.location.href = "mailto:" + "perfectseptem" + "@" + "gmail.com"; }}
         >
-          <span className="material-symbols-outlined text-xl">mail</span>
+          <span className="material-symbols-outlined text-xl">{ICONS.mail}</span>
         </a>
       </div>
     </aside>

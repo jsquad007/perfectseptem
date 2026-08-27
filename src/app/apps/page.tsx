@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import apps from "../../../content/apps.json";
+import { ICONS, type IconName } from "@/lib/icons";
 
 export const metadata: Metadata = {
   title: "Tools & Apps — Perfect Septem",
@@ -30,7 +31,7 @@ export default function AppsPage() {
                 />
               ) : (
                 <span className="material-symbols-outlined text-[#51dbd0] text-3xl flex-shrink-0">
-                  {app.icon}
+                  {ICONS[app.icon as IconName]}
                 </span>
               )}
               <div>
@@ -46,7 +47,7 @@ export default function AppsPage() {
                 {app.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2 text-sm text-[#bbc9c7]">
                     <span className="material-symbols-outlined text-[#51dbd0] text-base flex-shrink-0 mt-0.5">
-                      check
+                      {ICONS.check}
                     </span>
                     {feature}
                   </li>
@@ -60,7 +61,7 @@ export default function AppsPage() {
               rel="noopener noreferrer"
               className="mt-auto inline-flex items-center gap-2 text-[#51dbd0] font-bold hover:translate-x-1 transition-transform text-sm"
             >
-              Open App <span className="material-symbols-outlined text-base">open_in_new</span>
+              Open App <span className="material-symbols-outlined text-base">{ICONS.open_in_new}</span>
             </a>
           </div>
         ))}

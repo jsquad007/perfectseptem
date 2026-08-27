@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ICONS } from "@/lib/icons";
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -25,14 +26,14 @@ export default function TopNav() {
         </Link>
         <div className="flex items-center gap-4">
           <a href="/feed.xml" aria-label="RSS">
-            <span className="material-symbols-outlined text-[#51dbd0] text-xl">rss_feed</span>
+            <span className="material-symbols-outlined text-[#51dbd0] text-xl">{ICONS.rss_feed}</span>
           </a>
           <a
             href="#"
             aria-label="Email"
             onClick={(e) => { e.preventDefault(); window.location.href = "mailto:" + "perfectseptem" + "@" + "gmail.com"; }}
           >
-            <span className="material-symbols-outlined text-[#51dbd0] text-xl">mail</span>
+            <span className="material-symbols-outlined text-[#51dbd0] text-xl">{ICONS.mail}</span>
           </a>
         </div>
       </div>

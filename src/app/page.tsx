@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/lib/posts";
+import { ICONS } from "@/lib/icons";
 
 export default function HomePage() {
   const posts = getAllPosts();
@@ -28,19 +29,19 @@ export default function HomePage() {
             className="md:col-span-2 bento-card bg-[#2a2a2a] border border-[#3c4948]/20 rounded-xl p-8 flex flex-col justify-between min-h-48"
           >
             <div>
-              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">article</span>
+              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">{ICONS.article}</span>
               <h3 className="text-2xl font-semibold text-[#e5e2e1]">Latest Post</h3>
               <h4 className="text-[#51dbd0] font-medium mt-2 text-lg">{latest.title}</h4>
               <p className="text-[#bbc9c7] text-sm mt-2 line-clamp-2">{latest.excerpt}</p>
             </div>
             <span className="mt-8 inline-flex items-center gap-2 text-[#51dbd0] font-bold group-hover:translate-x-2 transition-transform">
-              Read <span className="material-symbols-outlined">arrow_forward</span>
+              Read <span className="material-symbols-outlined">{ICONS.arrow_forward}</span>
             </span>
           </Link>
         ) : (
           <div className="md:col-span-2 bento-card bg-[#2a2a2a] border border-[#3c4948]/20 rounded-xl p-8 flex flex-col justify-between min-h-48">
             <div>
-              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">article</span>
+              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">{ICONS.article}</span>
               <h3 className="text-2xl font-semibold text-[#e5e2e1]">Latest Post</h3>
               <p className="text-[#bbc9c7] text-sm mt-2">No posts yet — check back soon.</p>
             </div>
@@ -68,7 +69,7 @@ export default function HomePage() {
               a struggle with sin. As a result, my faith deepened and my gratitude to God grew stronger.
             </p>
             <span className="mt-4 inline-flex items-center gap-2 text-[#51dbd0] font-bold group-hover:translate-x-2 transition-transform">
-              More <span className="material-symbols-outlined">arrow_forward</span>
+              More <span className="material-symbols-outlined">{ICONS.arrow_forward}</span>
             </span>
           </div>
         </Link>
@@ -90,12 +91,12 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[#2a2a2a]/70 z-10" />
           <div className="relative z-20 p-8 flex flex-col justify-between h-full">
             <div>
-              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">shopping_bag</span>
+              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">{ICONS.shopping_bag}</span>
               <h3 className="text-2xl font-semibold text-[#e5e2e1]">Shop</h3>
               <p className="text-[#bbc9c7] text-sm mt-2">Inspired by Faith. Worn with Purpose.</p>
             </div>
             <span className="mt-8 inline-flex items-center gap-2 text-[#51dbd0] font-bold group-hover:translate-x-2 transition-transform">
-              Browse Collection <span className="material-symbols-outlined">arrow_forward</span>
+              Browse Collection <span className="material-symbols-outlined">{ICONS.arrow_forward}</span>
             </span>
           </div>
         </a>
@@ -119,7 +120,7 @@ export default function HomePage() {
             <h3 className="text-2xl font-semibold text-[#51dbd0]">Gallery</h3>
             <p className="text-[#bbc9c7] text-sm mt-1">Follow along on Instagram.</p>
             <span className="mt-4 inline-flex items-center gap-2 text-[#51dbd0] font-bold group-hover:translate-x-2 transition-transform">
-              Browse Gallery <span className="material-symbols-outlined">arrow_forward</span>
+              Browse Gallery <span className="material-symbols-outlined">{ICONS.arrow_forward}</span>
             </span>
           </div>
         </a>
@@ -139,12 +140,12 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#131313] via-[#131313]/60 to-transparent z-10" />
           <div className="relative z-20 p-8 flex flex-col justify-between h-full">
             <div>
-              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">smart_display</span>
+              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">{ICONS.smart_display}</span>
               <h3 className="text-2xl font-semibold text-[#e5e2e1]">Videos</h3>
               <p className="text-[#bbc9c7] text-sm mt-2">Faith-filled videos worth watching.</p>
             </div>
             <span className="mt-8 inline-flex items-center gap-2 text-[#51dbd0] font-bold group-hover:translate-x-2 transition-transform">
-              Watch <span className="material-symbols-outlined">arrow_forward</span>
+              Watch <span className="material-symbols-outlined">{ICONS.arrow_forward}</span>
             </span>
           </div>
         </Link>
@@ -164,12 +165,12 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#131313] via-[#131313]/60 to-transparent z-10" />
           <div className="relative z-20 p-8 flex flex-col justify-between h-full">
             <div>
-              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">widgets</span>
+              <span className="material-symbols-outlined text-[#51dbd0] text-4xl mb-3 block">{ICONS.widgets}</span>
               <h3 className="text-2xl font-semibold text-[#e5e2e1]">Tools &amp; Apps</h3>
               <p className="text-[#bbc9c7] text-sm mt-2">Things I&apos;ve made that are worth using.</p>
             </div>
             <span className="mt-8 inline-flex items-center gap-2 text-[#51dbd0] font-bold group-hover:translate-x-2 transition-transform">
-              Explore <span className="material-symbols-outlined">arrow_forward</span>
+              Explore <span className="material-symbols-outlined">{ICONS.arrow_forward}</span>
             </span>
           </div>
         </Link>
