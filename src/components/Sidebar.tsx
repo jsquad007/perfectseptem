@@ -7,10 +7,10 @@ const NAV = [
   { href: "/posts", label: "Posts", icon: "inventory_2" },
   { href: "/gallery", label: "Gallery", icon: "photo_library" },
   { href: "/shop", label: "Shop", icon: "shopping_bag" },
-  { href: "/about", label: "About", icon: "info" },
   { href: "/videos", label: "Videos", icon: "smart_display" },
   { href: "/apps", label: "Apps", icon: "widgets" },
   { href: "/faq", label: "FAQ", icon: "quiz" },
+  { href: "/about", label: "About", icon: "info" },
 ];
 
 export default function Sidebar() {
