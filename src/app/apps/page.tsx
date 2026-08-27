@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import apps from "../../../content/apps.json";
 
 export const metadata: Metadata = {
@@ -18,10 +19,20 @@ export default function AppsPage() {
             key={app.url}
             className="bg-[#1c1b1b] border border-[#3c4948]/20 rounded-xl p-7 flex flex-col gap-5"
           >
-            <div className="flex items-start gap-4">
-              <span className="material-symbols-outlined text-[#51dbd0] text-3xl flex-shrink-0 mt-0.5">
-                {app.icon}
-              </span>
+            <div className="flex items-center gap-4">
+              {app.logo ? (
+                <Image
+                  src={app.logo}
+                  alt={`${app.name} icon`}
+                  width={64}
+                  height={64}
+                  className="rounded-2xl flex-shrink-0 shadow-lg"
+                />
+              ) : (
+                <span className="material-symbols-outlined text-[#51dbd0] text-3xl flex-shrink-0">
+                  {app.icon}
+                </span>
+              )}
               <div>
                 <h2 className="text-[#e5e2e1] font-semibold text-xl leading-snug">{app.name}</h2>
                 <p className="text-[#51dbd0] text-sm font-medium mt-0.5">{app.tagline}</p>

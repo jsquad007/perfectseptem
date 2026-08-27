@@ -5,6 +5,7 @@
     "tagline": "Cook what you have. Waste less.",
     "description": "Match saved recipes against what's in your kitchen right now, prioritising ingredients closest to expiry. Less food thrown out, less water wasted on regrown replacements — a small act of stewardship over what we've been given.",
     "icon": "restaurant",
+    "logo": "/images/left2cook-icon.png",
     "features": [
       "AI recipe import from a photo, video link, URL, or pasted text",
       "AI pantry import — snap your fridge or a grocery receipt",
