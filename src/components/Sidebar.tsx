@@ -56,10 +56,9 @@ export default function Sidebar() {
           <span className="material-symbols-outlined text-xl">{ICONS.rss_feed}</span>
         </a>
         <a
-          href="#"
+          href="mailto:perfectseptem@gmail.com"
           aria-label="Email"
           className="flex items-center gap-3 text-[#bbc9c7] hover:text-[#51dbd0] transition-colors text-sm"
-          onClick={(e) => { e.preventDefault(); window.location.href = "mailto:" + "perfectseptem" + "@" + "gmail.com"; }}
         >
           <span className="material-symbols-outlined text-xl">{ICONS.mail}</span>
         </a>

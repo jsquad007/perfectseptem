@@ -29,9 +29,8 @@ export default function TopNav() {
             <span className="material-symbols-outlined text-[#51dbd0] text-xl">{ICONS.rss_feed}</span>
           </a>
           <a
-            href="#"
+            href="mailto:perfectseptem@gmail.com"
             aria-label="Email"
-            onClick={(e) => { e.preventDefault(); window.location.href = "mailto:" + "perfectseptem" + "@" + "gmail.com"; }}
           >
             <span className="material-symbols-outlined text-[#51dbd0] text-xl">{ICONS.mail}</span>
           </a>
