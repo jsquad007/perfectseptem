@@ -6,8 +6,8 @@ import { ICONS } from "@/lib/icons";
 const NAV = [
   { href: "/", label: "Home", icon: "home" },
   { href: "/posts", label: "Posts", icon: "inventory_2" },
-  { href: "/gallery", label: "Gallery", icon: "photo_library" },
-  { href: "/shop", label: "Shop", icon: "shopping_bag" },
+  { href: "https://www.instagram.com/perfectseptem/", label: "Gallery", icon: "photo_library", external: true },
+  { href: "https://www.redbubble.com/people/PerfectSeptem/shop", label: "Shop", icon: "shopping_bag", external: true },
   { href: "/videos", label: "Videos", icon: "smart_display" },
   { href: "/apps", label: "Apps", icon: "widgets" },
   { href: "/faq", label: "FAQ", icon: "quiz" },
@@ -28,18 +28,27 @@ export default function Sidebar() {
       </div>
 
       <nav className="flex-1 space-y-1">
-        {NAV.map(({ href, label, icon }) => {
-          const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
+        {NAV.map(({ href, label, icon, ...rest }) => {
+          const external = "external" in rest && rest.external;
+          const active = !external && (href === "/" ? pathname === "/" : pathname.startsWith(href));
+          const className = `flex items-center gap-3 px-3 py-3 rounded-lg transition-colors text-sm font-medium ${
+            active
+              ? "bg-[#353534] text-[#51dbd0]"
+              : "text-[#bbc9c7] hover:bg-[#201f1f] hover:text-[#e5e2e1]"
+          }`;
+
+          if (external) {
+            return (
+              <a key={href} href={href} target="_blank" rel="noopener noreferrer" className={className}>
+                <span className="material-symbols-outlined text-xl">{ICONS[icon]}</span>
+                {label}
+                <span className="material-symbols-outlined text-sm ml-auto">{ICONS.open_in_new}</span>
+              </a>
+            );
+          }
+
           return (
-            <Link
-              key={href}
-              href={href}
-              className={`flex items-center gap-3 px-3 py-3 rounded-lg transition-colors text-sm font-medium ${
-                active
-                  ? "bg-[#353534] text-[#51dbd0]"
-                  : "text-[#bbc9c7] hover:bg-[#201f1f] hover:text-[#e5e2e1]"
-              }`}
-            >
+            <Link key={href} href={href} className={className}>
               <span className="material-symbols-outlined text-xl">{ICONS[icon]}</span>
               {label}
             </Link>

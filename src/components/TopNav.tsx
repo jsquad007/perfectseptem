@@ -7,13 +7,13 @@ import { ICONS } from "@/lib/icons";
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/posts", label: "Posts" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/shop", label: "Shop" },
+  { href: "https://www.instagram.com/perfectseptem/", label: "Gallery", external: true },
+  { href: "https://www.redbubble.com/people/PerfectSeptem/shop", label: "Shop", external: true },
   { href: "/videos", label: "Videos" },
   { href: "/apps", label: "Apps" },
   { href: "/faq", label: "FAQ" },
   { href: "/about", label: "About" },
-];
+] as const;
 
 export default function TopNav() {
   const pathname = usePathname();
@@ -60,18 +60,26 @@ export default function TopNav() {
       </div>
       {menuOpen && (
         <nav id="mobile-nav-panel" className="flex flex-col px-4 pb-3">
-          {NAV.map(({ href, label }) => {
-            const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
+          {NAV.map(({ href, label, ...rest }) => {
+            const external = "external" in rest && rest.external;
+            const active = !external && (href === "/" ? pathname === "/" : pathname.startsWith(href));
+            const className = `flex items-center gap-1 text-sm font-medium px-3 py-2.5 rounded-lg transition-colors ${
+              active
+                ? "bg-[#0bb4aa] text-[#003734]"
+                : "text-[#bbc9c7] hover:text-[#51dbd0]"
+            }`;
+
+            if (external) {
+              return (
+                <a key={href} href={href} target="_blank" rel="noopener noreferrer" className={className}>
+                  {label}
+                  <span className="material-symbols-outlined text-sm ml-auto">{ICONS.open_in_new}</span>
+                </a>
+              );
+            }
+
             return (
-              <Link
-                key={href}
-                href={href}
-                className={`text-sm font-medium px-3 py-2.5 rounded-lg transition-colors ${
-                  active
-                    ? "bg-[#0bb4aa] text-[#003734]"
-                    : "text-[#bbc9c7] hover:text-[#51dbd0]"
-                }`}
-              >
+              <Link key={href} href={href} className={className}>
                 {label}
               </Link>
             );
