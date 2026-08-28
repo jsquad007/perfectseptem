@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "FAQ — Perfect Septem",
   description: "Frequently asked questions about Perfect Septem.",
+  alternates: { canonical: "/faq" },
 };
 
 const FAQS = [

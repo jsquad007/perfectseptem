@@ -6,6 +6,7 @@ import { ICONS, type IconName } from "@/lib/icons";
 export const metadata: Metadata = {
   title: "Tools & Apps — Perfect Septem",
   description: "Things I've made that are worth using.",
+  alternates: { canonical: "/apps" },
 };
 
 export default function AppsPage() {

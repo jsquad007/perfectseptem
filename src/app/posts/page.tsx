@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Posts — Perfect Septem",
   description: "Articles and reflections on the Catholic faith.",
+  alternates: { canonical: "/posts" },
 };
 
 export default function PostsPage() {

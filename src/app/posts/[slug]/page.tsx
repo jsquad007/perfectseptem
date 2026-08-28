@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.meta.title ?? slug} — Perfect Septem`,
     description: post.meta.excerpt,
+    alternates: { canonical: `/posts/${slug}` },
   };
 }
 

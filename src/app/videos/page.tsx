@@ -5,6 +5,7 @@ import VideoCard from "@/components/VideoCard";
 export const metadata: Metadata = {
   title: "Videos — Perfect Septem",
   description: "Faith-filled videos worth watching.",
+  alternates: { canonical: "/videos" },
 };
 
 export default function VideosPage() {

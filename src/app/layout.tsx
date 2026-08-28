@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   description:
     '"I do not say to you seven times, but seventy times seven." Matthew 18:22',
   metadataBase: new URL("https://perfectseptem.com"),
+  alternates: { canonical: "/" },
   openGraph: {
     siteName: "Perfect Septem",
     type: "website",

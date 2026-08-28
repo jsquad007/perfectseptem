@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About — Perfect Septem",
   description: "The story behind Perfect Septem.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
